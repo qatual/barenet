@@ -1,14 +1,4 @@
-# TOMP Bare Server
-
-This repository implements the TompHTTP bare server. See the specification [here](https://github.com/tomphttp/specifications/blob/master/BareServer.md).
-
-## Upgrading
-
-A guide for updating from v1 to v2 can be found [here](./docs/V2-UPGRADE-GUIDE.md).
-
-## Usage
-
-We provide a command-line interface for creating a server.
+# BareNET
 
 For more features, specify the `--help` option when running the CLI.
 
@@ -17,7 +7,7 @@ For more features, specify the `--help` option when running the CLI.
 1. Install Bare Server Node globally
 
 ```sh
-npm install --global @tomphttp/bare-server-node
+npm install --global @qatual/barenet
 ```
 
 2. Start the server
@@ -34,8 +24,8 @@ npx bare-server-node --port 8080 --host localhost
 
 ## Programically create a bare server
 
-See [examples/](https://github.com/tomphttp/bare-server-node/tree/master/examples).
+See [examples/](https://github.com/qatual/barenet/tree/master/examples).
 
 ## Development
 
-See the [wiki](https://github.com/tomphttp/bare-server-node/wiki).
+See the [wiki](https://github.com/qatual/barenet/wiki).
