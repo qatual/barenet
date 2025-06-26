@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BareNET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0b0f2a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0e0ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    img {
+      max-width: 240px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #1a1f4d;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      color: #5fb2ff;
+      text-shadow: 0 0 10px #5fb2ff, 0 0 20px #3771c8;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+
+    .bounce-letter {
+      display: inline-block;
+      animation-name: bounce;
+      animation-duration: 0.6s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+
+    .bounce-letter:nth-child(1) { animation-delay: 0s; }
+    .bounce-letter:nth-child(2) { animation-delay: 0.1s; }
+    .bounce-letter:nth-child(3) { animation-delay: 0.2s; }
+    .bounce-letter:nth-child(4) { animation-delay: 0.3s; }
+    .bounce-letter:nth-child(5) { animation-delay: 0.4s; }
+    .bounce-letter:nth-child(6) { animation-delay: 0.5s; }
+    .bounce-letter:nth-child(7) { animation-delay: 0.6s; }
+
+    p {
+      max-width: 700px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #b5c9ff;
+      padding: 0 20px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #7faaff;
+    }
+
+    .footer a {
+      font-weight: bold;
+      text-decoration: none;
+      background: linear-gradient(270deg, #ff6ec4, #fcb045, #00f0ff, #ff6ec4);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbowShift 6s ease infinite;
+      text-shadow: 0 0 6px #fff4;
+    }
+
+    @keyframes rainbowShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://uploads.onecompiler.io/43fw98db5/43nxrdycg/3dgifmaker30681.gif" alt="BareNET Logo" />
+
+  <h1 id="baretet-text"></h1>
+  <p>BareNET is a bare server that is meant for ultraviolet! use this link inside of your uv bare server!</p>
+
+  <div class="footer">
+    server by <a href="https://discord.gg/7fknN9g5eB" target="_blank">soloo</a> &lt;3
+  </div>
+
+  <script>
+    const text = "BareNET";
+    const container = document.getElementById('baretet-text');
+    container.innerHTML = '';
+    for(let i = 0; i < text.length; i++) {
+      const span = document.createElement('span');
+      span.textContent = text[i];
+      span.className = 'bounce-letter';
+      container.appendChild(span);
+    }
+  </script>
+
+</body>
+</html>
